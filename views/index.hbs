@@ -1,4 +1,4 @@
-<nav class="w-full font-bold dark:text-white text-black dark:bg-blue-950 bg-blue-100 px-2 py-2">
+<nav class="w-full font-bold dark:bg-blue-800 bg-white px-2 py-2 shadow-lg">
     <p class="text-lg">
         <a href="/">
             <i class="fa-solid fa-globe-wifi"></i>
@@ -6,7 +6,7 @@
         </a>
     </p>
 </nav>
-<div class="px-6 py-6 dark:bg-blue-700 dark:text-white flex">
+<div class="px-6 py-6 flex flex-col lg:flex-row">
     <div class="w-full lg:w-4/5">
         <div class="header mb-5">
             <h1 class="text-xl">Top 100 Websites</h1>
@@ -30,7 +30,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
                 {{#each pingResults as |pingResult i|}}
                 {{#if pingResult.ipv6}}
-                <div class="bg-slate-900 rounded-4xl p-3 border-l-4 border-green-600">
+                <div class="dark:bg-slate-800 bg-white rounded-4xl p-3 border-l-4 border-green-600 shadow-sm">
                     <p><i class="fa-solid fa-circle text-green-600"></i> {{pingResult.number}}. {{pingResult.domain}}</p>
                 </div>
                 {{/if}}
@@ -46,7 +46,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
                 {{#each pingResults as |pingResult i|}}
                 {{#unless pingResult.ipv6}}
-                <div class="bg-slate-900 rounded-4xl p-3 border-l-4 border-red-600">
+                <div class="dark:bg-slate-800 bg-white rounded-4xl p-3 border-l-4 border-red-600 shadow-sm">
                     <p><i class="fa-solid fa-circle text-red-600"></i> {{pingResult.number}}. {{pingResult.domain}}</p>
                 </div>
                 {{/unless}}
@@ -76,7 +76,7 @@
             <div class="grid grid-cols-1 gap-2">
                 {{#each pingResultsMe as |pingResult i|}}
                 {{#if pingResult.ipv6}}
-                <div class="bg-slate-900 rounded-4xl p-3 border-l-4 border-green-600">
+                <div class="dark:bg-slate-800 bg-white rounded-4xl p-3 border-l-4 border-green-600 shadow-sm">
                     <p><i class="fa-solid fa-circle text-green-600"></i> {{pingResult.domain}}</p>
                 </div>
                 {{/if}}
@@ -92,7 +92,7 @@
             <div class="grid grid-cols-1 gap-2">
                 {{#each pingResultsMe as |pingResult i|}}
                 {{#unless pingResult.ipv6}}
-                <div class="bg-slate-900 rounded-4xl p-3 border-l-4 border-red-600">
+                <div class="dark:bg-slate-800 bg-white rounded-4xl p-3 border-l-4 border-red-600 shadow-sm">
                     <p><i class="fa-solid fa-circle text-red-600"></i> {{pingResult.domain}}</p>
                 </div>
                 {{/unless}}
