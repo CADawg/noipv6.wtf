@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run styles & npm run serve",
+    "start": "concurrently \"npm run styles\" \"npm run serve\"",
     "serve": "nodemon ./bin/www",
     "styles": "npx @tailwindcss/cli -i ./public/stylesheets/input.css -o ./public/stylesheets/output.css --watch"
   },
@@ -17,5 +17,9 @@
     "morgan": "^1.10.1",
     "ping": "^0.4.2",
     "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "nodemon": "^3.1.10"
   }
 }
